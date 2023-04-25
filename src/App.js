@@ -1,15 +1,14 @@
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css'
-import CurrentWeather from './components/CurrentWeather'
-import Search from './components/Search';
-
+import Search from "./components/Search";
+import Forecast from "./components/Forecast";
 
 function App() {
   return (
     <div className="App">
-    <CurrentWeather/>
-<Search/>
+      <Search />
+      <Forecast />
     </div>
   );
 }

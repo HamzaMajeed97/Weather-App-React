@@ -3,3 +3,19 @@
   margin: 0;
   padding: 0;
 }
+
+.App {
+  max-width: 720px;
+  margin: 20px auto;
+  color: white;
+}
+
+.search {
+  display: flex;
+  flex: stresch;
+}
+
+.card-1 {
+  border: 1px solid black;
+  margin-top: 20px;
+}

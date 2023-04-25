@@ -1,13 +1,26 @@
-const Forecast = () => {
+import { Accordion } from "react-bootstrap";
 
-    let forcastUrl = "https://pro.openweathermap.org/data/2.5/forecast/climate?id={city ID}&appid={API key}"
+const Forecast = ({ forecast }) => {
+  const API_KEY = process.env.REACT_APP_API_KEY;
 
-    return (
-        <div>
+  const WEEK_DAYS = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
 
-        </div>
-    
-    )
+  const day = new Date().getDay;
 
+  return (
+    <Accordion defaultActiveKey="0">
+      <div></div>
+      <div></div>
+    </Accordion>
+  );
+};
 
-    export default Forecast 
+export default Forecast;
