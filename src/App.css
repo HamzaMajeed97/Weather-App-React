@@ -1,3 +1,10 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Gotham Rounded", sans-serif;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,12 +17,36 @@
   color: white;
 }
 
-.search {
-  display: flex;
-  flex: stresch;
-}
-
 .card-1 {
   border: 1px solid black;
   margin-top: 20px;
+}
+
+.cityName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.city {
+  font-size: 2rem;
+}
+
+.name {
+  font-size: 3rem;
+}
+
+.details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.data-details {
+  display: flex;
+  flex-grow: 1;
+  padding: 1rem;
 }
