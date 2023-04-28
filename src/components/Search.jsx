@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import CurrentWeather from "./CurrentWeather";
 
 const Search = () => {
@@ -10,7 +10,8 @@ const Search = () => {
 
   const WEATHER_URL = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${API_KEY}`;
 
-  const searchHandler = () => {
+  const searchHandler = (e) => {
+    e.preventDefault();
     fetchWeather();
   };
 
@@ -20,8 +21,6 @@ const Search = () => {
       if (response.ok) {
         let data1 = await response.json();
         setData(data1);
-
-        console.log(data1);
       } else {
         console.log("something went wrong");
       }
@@ -32,16 +31,15 @@ const Search = () => {
 
   return (
     <div>
-      <Form className="search">
+      <Form className="search" onSubmit={searchHandler}>
         <Form.Group>
           <Form.Control
             type="text"
-            placeholder="Enter Your Location"
+            placeholder="Enter Your Location And Press Enter"
             value={location}
             onChange={(e) => setLocation(e.target.value)}
           />
         </Form.Group>
-        <Button onClick={searchHandler}>Search</Button>
       </Form>
       {data && <CurrentWeather data={data} />}
     </div>
